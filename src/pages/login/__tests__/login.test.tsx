@@ -12,10 +12,10 @@ const mock = new MockAdapter(client);
 test("it should be able to sign in", async () => {
   const user: UserModel = {
     id: "1912391230",
-    email: "ismael.sousa@fleye.com.br",
-    name: "Ismael",
+    email: "edsonjunior.narvaes@gmail.com",
+    name: "Edson",
   };
-  const pass = "Ismael123";
+  const pass = "Edson123";
 
   mock.onPost("/sessions").replyOnce(200, user);
 
@@ -46,15 +46,15 @@ test("it should be able to sign in", async () => {
   expect(mock.history.post[0].data).toEqual(
     JSON.stringify({
       email: user.email,
-      password: "Ismael123",
+      password: "Edson123",
     })
   );
   mock.resetHistory();
 });
 
 test("it should break on sign in", async () => {
-  const email = "ismael.sousa@fleye.com.br";
-  const pass = "ismael1234";
+  const email = "edsonjunior.narvaes@gmail.com";
+  const pass = "edson1234";
   mock.onPost("/sessions").reply(401, "User not found");
 
   const alert = jest.spyOn(Alert, "alert");
