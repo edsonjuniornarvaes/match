@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { login } from "../../repositories/auth.repository";
+import { login } from "../../../components/repositories/auth.repository";
 import { Alert } from "react-native";
 
 const useLoginViewModel = () => {

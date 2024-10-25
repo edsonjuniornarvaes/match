@@ -2,9 +2,9 @@ import { Alert } from "react-native";
 import { renderHook, act } from "@testing-library/react-hooks";
 
 import MockAdapter from "axios-mock-adapter";
-import { UserModel } from "../../../common/models/user.model";
+import { UserModel } from "../../../../components/common/models/user.model";
 
-import client from "../../../repositories/client";
+import client from "../../../../components/repositories/client";
 import useLoginViewModel from "../view.model";
 
 const mock = new MockAdapter(client);

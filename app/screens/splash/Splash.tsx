@@ -24,7 +24,7 @@ const Splash: React.FC<Props> = ({ onComplete }) => {
       <Video
         style={StyleSheet.absoluteFill}
         resizeMode={ResizeMode.COVER}
-        source={require("../../assets/videos/splash.mp4")}
+        source={require("../../../assets/videos/splash.mp4")}
         isLooping={false}
         onPlaybackStatusUpdate={onPlaybackStatusUpdate}
         shouldPlay={true}
